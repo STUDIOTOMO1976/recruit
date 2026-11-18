@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="ja" data-app-version="16.1"> <head> <meta charset="utf-8"/> <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/> <meta content="#f7f7fc" name="theme-color"/> <meta content="no-referrer" name="referrer"/> <title>藤江おしごと発見｜適職診断・求人検索・履歴書・お仕事ガイド</title> <style>:root{--ink:#24463b;--deep:#176b53;--green:#258d6d;--line:#dcece3;--pale:#effaf4;--gold:#f0a43e;--cream:#fff4e5;--radius:22px;font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN","M PLUS Rounded 1c","Arial Rounded MT Bold","Hiragino Kaku Gothic ProN",system-ui,sans-serif;color:var(--ink);background:#f6fbf8}
+<html lang="ja" data-app-version="16.2"> <head> <meta charset="utf-8"/> <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/> <meta content="#f7f7fc" name="theme-color"/> <meta content="no-referrer" name="referrer"/> <title>藤江おしごと発見｜適職診断・求人検索・履歴書・お仕事ガイド</title> <style>:root{--ink:#24463b;--deep:#176b53;--green:#258d6d;--line:#dcece3;--pale:#effaf4;--gold:#f0a43e;--cream:#fff4e5;--radius:22px;font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN","M PLUS Rounded 1c","Arial Rounded MT Bold","Hiragino Kaku Gothic ProN",system-ui,sans-serif;color:var(--ink);background:#f6fbf8}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;min-width:320px;font-size:16px;line-height:1.65;line-break:strict;-webkit-text-size-adjust:100%}button,input,textarea,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer;border:0}a{color:var(--deep)}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}h1,h2,h3,p{overflow-wrap:normal;word-break:normal;text-wrap:pretty}h1,h2,h3{line-height:1.4;font-weight:900}h1{font-size:clamp(30px,4.2vw,57px);margin:10px 0 14px}h2{font-size:clamp(23px,3vw,30px);margin:0 0 14px}h3{font-size:18px;margin:0 0 8px}p{margin:7px 0 14px}small,.small{font-size:13px;color:#5e7568}.sub{color:#567669;margin:0 0 15px}.wrap{width:min(1000px,calc(100% - 32px));margin-left:auto;margin-right:auto}.hidden,[hidden]{display:none!important}.center{text-align:center}.full{width:100%}
 .btn,.tab{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:56px;padding:12px 18px;border-radius:17px;font-weight:900;text-decoration:none;line-height:1.35;transition:transform .1s,filter .1s;white-space:normal}.btn{color:white;background:var(--green);box-shadow:0 4px 0 #12614a}.btn:hover{filter:brightness(1.04)}.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #12614a}.btnPrimary{background:#ffad56;color:#54391b;box-shadow:0 4px 0 #dc8640}.btnSoft,.btn.secondary,.btnWhite{background:white;color:#19745d;border:2px solid #d2e6dc;box-shadow:0 4px 0 #d1e5d9}.btn.light{background:#fff1b7;color:#665322;box-shadow:0 4px 0 #e4cf83}.btn:disabled{opacity:.5;cursor:not-allowed}.row{display:flex;flex-wrap:wrap;gap:11px;margin-top:18px}.row>.btn{flex:1 1 175px}
 header{padding:26px 0 18px;background:radial-gradient(circle at 82% 16%,#fff2c6,transparent 30%),linear-gradient(135deg,#ddfaea,#f1fff6 55%,#fff1e5)}.heroGrid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:22px}.heroBrand{display:inline-flex;align-items:center;gap:10px;font-size:18px;font-weight:900;text-decoration:none;color:#24604d}.heroBrand span{font-size:12px;color:#557769;border-radius:99px;background:white;padding:5px 10px}.heroBubbles{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 8px}.heroBubbles span{background:#fff;border:1px solid #d7e9df;border-radius:99px;padding:4px 12px;color:#37826a;font-weight:900;font-size:13px}.heroCopy h1{color:#246c51;letter-spacing:-.03em}.heroCopy h1 .accent{display:block;color:#d88b36;letter-spacing:-.045em;white-space:nowrap;font-size:.91em}.heroLead{font-size:19px;font-weight:850;line-height:1.65}.heroButtons{display:flex;gap:12px;flex-wrap:wrap;margin:21px 0}.heroButtons .btn{flex:1 1 165px}.heroArt{text-align:center;min-width:0}.heroBubble{border-radius:35px;background:#ffffffb8;border:4px solid white;padding:12px 8px;box-shadow:0 7px 0 #e0ecdb;display:flex;align-items:center;justify-content:center}.heroBubble img{width:100%;height:auto;max-height:350px;object-fit:contain;display:block}.heroPromise{text-align:center;max-width:800px;margin:19px auto 0;padding:0 18px;color:#527a5b;font-size:14px;font-weight:850}
@@ -179,6 +179,31 @@ body{padding-bottom:92px}
 .flowAfter{text-align:center;margin:12px 0 18px}
 @media(max-width:420px){.wardLinkGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media print{.wardChooser,.flowAfter{display:none!important}}
+
+/* A4確認：スマホでは用紙全体を縮小して画面幅に収める。印刷は原寸。 */
+#resumePreviewPanel{overflow:hidden!important;min-width:0}
+.pdfPaperStage{width:100%;max-width:100%;overflow:hidden;position:relative;margin:14px auto 8px}
+.pdfPaperInner{width:720px;transform-origin:0 0;will-change:transform}
+#pdfPaperInner #printArea,#pdfPaperInner #entryPrintArea{width:720px!important;max-width:720px!important;min-width:720px!important;box-sizing:border-box;margin:0!important;padding:20px!important}
+#pdfPaperInner .resumeTable{table-layout:fixed;max-width:100%}
+.pdfControlPanel{margin:16px auto 0;max-width:760px;display:grid;gap:12px}
+.pdfStatus{background:#f0faf5;border:1px solid #c9e5d4;border-radius:14px;padding:12px;color:#28634f;font-size:14px;overflow-wrap:anywhere}
+.pdfReady{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.pdfReady[hidden]{display:none!important}
+.pdfReady>*{min-width:0}
+.pdfReady #pdfOpenLink{grid-column:1/-1}
+.sevenGuide{border:1px solid #cdddef;background:#f6faff;border-radius:15px;padding:12px 15px;font-size:14px}
+.sevenGuide summary{cursor:pointer;min-height:40px;font-weight:850;align-content:center;color:#244d79}
+.sevenGuide ol{margin:10px 0 14px;padding-left:20px;line-height:1.8}
+.sevenGuide a{font-weight:800}
+.sevenGuide .small{margin:12px 0 0}
+@media(max-width:480px){#resumePreviewPanel{padding:12px!important}.pdfReady{grid-template-columns:1fr}.pdfReady #pdfOpenLink{grid-column:auto}.pdfControlPanel .btn{font-size:14px}}
+@media print{
+  .pdfPaperStage{overflow:visible!important;width:100%!important;height:auto!important;max-width:none!important;margin:0!important}
+  .pdfPaperInner{transform:none!important;width:100%!important;will-change:auto!important}
+  #pdfPaperInner #printArea,#pdfPaperInner #entryPrintArea{width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding:0!important}
+  .pdfControlPanel{display:none!important}
+}
 </style> <meta content="light" name="color-scheme"/><meta content="株式会社藤江の適職診断。6職種の紹介、求人検索、履歴書・エントリーシートの作成、応募準備まで。登録不要・無料。" name="description"/><style>html{scroll-padding-top:18px}
 body{overflow-x:hidden}
 .introMascots{display:flex!important;justify-content:center;align-items:center;gap:clamp(5px,2vw,15px);flex-wrap:nowrap}
@@ -827,7 +852,7 @@ body:not(.diagnosisActive) #diagnosis.landingCollapsed{display:none!important}
 <div class="draftButtons"><button class="btn btnSoft" id="saveDraftBtn" type="button">下書きを保存</button>
 <button class="btn btnSoft" id="loadDraftBtn" type="button">下書きを再開</button></div>
 <input accept="application/json,.json" aria-label="下書きファイルを選ぶ" class="visuallyHidden" id="draftFile" type="file"/>
-<span class="small" id="draftStatus" role="status">保存・再開は本人の操作で行います。写真は保存されません。</span></div></form></div> <div class="panel hidden" id="resumePreviewPanel"><h2>履歴書・エントリーシートの確認</h2> <div class="preview resumePage" id="printArea"><h2>履 歴 書</h2><div class="resumeDate" id="prDate"></div><div class="resumeTop"><div><table class="resumeTable"><tr><th>ふりがな</th><td id="prKana"></td></tr><tr><th>氏名</th><td id="prName" style="font-size:21px"></td></tr><tr><th>生年月日</th><td id="prBirth"></td></tr><tr><th>性別（任意）</th><td id="prGender"></td></tr></table></div><div class="photo" id="prPhoto">証明写真<br/>（任意）</div></div> <table class="resumeTable"><tr><th>現住所</th><td id="prAddress"></td></tr><tr><th>電話番号</th><td id="prPhone"></td></tr><tr><th>メール</th><td id="prEmail"></td></tr><tr><th>連絡先（任意）</th><td id="prContact"></td></tr></table> <table class="resumeTable"><tr><th>学歴</th><td id="prEducation"></td></tr><tr><th>職歴</th><td id="prCareer"></td></tr><tr><th>免許・資格</th><td id="prLicenses"></td></tr></table> <table class="resumeTable"><tr><th>希望職種</th><td id="prPreferred"></td></tr><tr><th>志望の動機・自己PR</th><td id="prMotivation"></td></tr><tr><th>本人希望欄</th><td id="prRequests"></td></tr><tr><th>応募区分・勤務日数</th><td id="prEmployment"></td></tr><tr><th>勤務・通勤の希望</th><td id="prWorkPref"></td></tr></table></div><div class="entryPrintPage hidden" id="entryPrintArea">
+<span class="small" id="draftStatus" role="status">保存・再開は本人の操作で行います。写真は保存されません。</span></div></form></div> <div class="panel hidden" id="resumePreviewPanel"><h2>履歴書・エントリーシートの確認</h2> <div id="pdfPaperStage" class="pdfPaperStage"><div id="pdfPaperInner" class="pdfPaperInner"><div class="preview resumePage" id="printArea"><h2>履 歴 書</h2><div class="resumeDate" id="prDate"></div><div class="resumeTop"><div><table class="resumeTable"><tr><th>ふりがな</th><td id="prKana"></td></tr><tr><th>氏名</th><td id="prName" style="font-size:21px"></td></tr><tr><th>生年月日</th><td id="prBirth"></td></tr><tr><th>性別（任意）</th><td id="prGender"></td></tr></table></div><div class="photo" id="prPhoto">証明写真<br/>（任意）</div></div> <table class="resumeTable"><tr><th>現住所</th><td id="prAddress"></td></tr><tr><th>電話番号</th><td id="prPhone"></td></tr><tr><th>メール</th><td id="prEmail"></td></tr><tr><th>連絡先（任意）</th><td id="prContact"></td></tr></table> <table class="resumeTable"><tr><th>学歴</th><td id="prEducation"></td></tr><tr><th>職歴</th><td id="prCareer"></td></tr><tr><th>免許・資格</th><td id="prLicenses"></td></tr></table> <table class="resumeTable"><tr><th>希望職種</th><td id="prPreferred"></td></tr><tr><th>志望の動機・自己PR</th><td id="prMotivation"></td></tr><tr><th>本人希望欄</th><td id="prRequests"></td></tr><tr><th>応募区分・勤務日数</th><td id="prEmployment"></td></tr><tr><th>勤務・通勤の希望</th><td id="prWorkPref"></td></tr></table></div><div class="entryPrintPage hidden" id="entryPrintArea">
 <div class="entrySheetTitle"><h2>株式会社藤江　エントリーシート</h2><span>応募者記入用</span></div>
 <p class="entrySheetLead">このシートは応募者が希望を整理するためのものです。提出方法は応募先に確認してください。</p>
 <table class="resumeTable"><tbody>
@@ -848,7 +873,21 @@ body:not(.diagnosisActive) #diagnosis.landingCollapsed{display:none!important}
 <tr><th>その他希望</th><td id="esRemarks"></td></tr>
 </tbody></table>
 <p class="entrySheetLead">上記は本人の希望をまとめたものであり、採用条件の確約ではありません。</p>
-</div> <div class="row noPrint" id="printActions"><button class="btn btnPrimary" id="printBtn" type="button">履歴書をPDF保存・印刷</button><button class="btn btnSoft" id="printEntryBtn" type="button">エントリーシートをPDF保存・印刷</button><button class="btn secondary" id="editBtn" type="button">入力を修正する</button><a class="btn btnPrimary" href="https://job-gear.net/fujinoe/" rel="noopener noreferrer" target="_blank">藤江の求人・応募ページへ</a><button class="btn secondary" id="clearFromPreview" type="button">入力内容を削除</button></div> <p class="small noPrint">PDFの保存方法は端末・ブラウザにより異なります。</p></div> </section></main><footer><span>© 株式会社藤江</span><br/><small>診断結果は興味の目安です。採用選考には使用しません。</small></footer> 
+</div></div></div> <div class="row noPrint" id="printActions"><button class="btn btnPrimary" id="printBtn" type="button">履歴書PDFを作成</button><button class="btn btnSoft" id="printEntryBtn" type="button">エントリーシートPDFを作成</button><button class="btn secondary" id="editBtn" type="button">入力を修正する</button><a class="btn btnPrimary" href="https://job-gear.net/fujinoe/" rel="noopener noreferrer" target="_blank">藤江の求人・応募ページへ</a><button class="btn secondary" id="clearFromPreview" type="button">入力内容を削除</button></div>
+<div class="pdfControlPanel noPrint" aria-live="polite">
+  <p id="pdfStatus" class="pdfStatus">上のボタンでPDFを作成すると、端末に保存・共有できます。入力内容は藤江へ送信されません。</p>
+  <div id="pdfReady" hidden class="pdfReady">
+    <a class="btn btnPrimary" id="pdfSaveLink" href="#" download>PDFを保存</a>
+    <button class="btn btnSoft" id="pdfShareBtn" type="button">スマホで共有</button>
+    <a class="btn btnSoft" id="pdfOpenLink" href="#" target="_blank" rel="noopener">PDFを開く・拡大</a>
+  </div>
+  <details class="sevenGuide"><summary>セブン‐イレブンで印刷する方法</summary>
+    <ol><li>「履歴書PDFを作成」を押してPDFを保存します。</li><li>スマホの「かんたんnetprint」アプリから保存したPDFを登録します。</li><li>セブン‐イレブンのマルチコピー機でQRコードまたはプリント予約番号を使い、A4普通紙で印刷します。</li></ol>
+    <a href="https://www.sej.co.jp/services/netp_app.html" target="_blank" rel="noopener noreferrer">かんたんnetprint（セブン‐イレブン公式）</a>
+    <p class="small">※PDFをnetprintに登録すると、印刷サービスへ個人情報を含むファイルが送信されます。本人の操作でのみ登録してください。藤江への自動送信はありません。</p>
+  </details>
+  <button class="btn btnSoft" id="nativePrintBtn" type="button">履歴書をパソコンから直接印刷</button>
+</div></div> </section></main><footer><span>© 株式会社藤江</span><br/><small>診断結果は興味の目安です。採用選考には使用しません。</small></footer> 
 
 <div id="guideOverlay" class="guideOverlay" hidden></div>
 <section id="guideSheet" class="guideSheet" role="dialog" aria-modal="true" aria-labelledby="guideTitle" hidden tabindex="-1">
@@ -1012,7 +1051,7 @@ function buildPreview(){const value=id=>$(id).value.trim();const put=(id,str)=>$
  for(const id of ['prEducation'])$(id).textContent=convertEraText($(id).textContent);
  $('entryPrintArea').classList.add('hidden');$('printArea').classList.remove('hidden');
  $('resumePreviewPanel').scrollIntoView({behavior:'smooth',block:'start'})}
-$('resumeForm').addEventListener('submit',e=>e.preventDefault());$('previewBtn').addEventListener('click',buildPreview);$('editBtn').addEventListener('click',()=>{$('resumePreviewPanel').classList.add('hidden');$('resumeFormPanel').scrollIntoView({behavior:'smooth',block:'start'})});$('printBtn').addEventListener('click',()=>{if(!ensureWizardValid())return;buildPreview();document.body.classList.remove('printEntry');window.print()});
+$('resumeForm').addEventListener('submit',e=>e.preventDefault());$('previewBtn').addEventListener('click',buildPreview);$('editBtn').addEventListener('click',()=>{$('resumePreviewPanel').classList.add('hidden');$('resumeFormPanel').scrollIntoView({behavior:'smooth',block:'start'})});
 $('photoInput').addEventListener('change',e=>{if(photoUrl){URL.revokeObjectURL(photoUrl);photoUrl=null}const file=e.target.files?.[0];if(!file)return;if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>5*1024*1024){alert('PNG・JPEG・WebPの5MB以下の画像を選んでください。');e.target.value='';return}photoUrl=URL.createObjectURL(file)});
 $('clearBtn').addEventListener('click',()=>{if(!confirm('履歴書の入力内容をすべて消去しますか？'))return;$('resumeForm').reset();if(photoUrl)URL.revokeObjectURL(photoUrl);photoUrl=null;$('resumePreviewPanel').classList.add('hidden');currentJob='';$('fullName').focus()});
 // BFCache等のブラウザによる復元はブラウザ側の仕様。入力欄の自動保存は実装しない。
@@ -1123,7 +1162,7 @@ function convertEraText(t){return String(t).replace(/(令和|平成|昭和)\s*(�
  return n>=1&&n<=99?String(ERA_BASE[e]+n)+'年':_;
 });}
 // Print applicant's entry sheet separately; ensure other pages are not printed.
-$('printEntryBtn').addEventListener('click',()=>{if(!ensureWizardValid())return;buildPreview();$('printArea').classList.add('hidden');$('entryPrintArea').classList.remove('hidden');document.body.classList.add('printEntry');window.print()});
+
 window.addEventListener('afterprint',()=>{document.body.classList.remove('printEntry');$('printArea').classList.remove('hidden');$('entryPrintArea').classList.add('hidden')});
 // When entering private info, shortcuts to other sections do not transmit form data.
 for(const tab of document.querySelectorAll('.searchTab')){
@@ -1762,5 +1801,186 @@ panel.querySelector('#metricsDownload').addEventListener('click',()=>{const csv=
  document.querySelectorAll('a[href="#salaryCalc"]').forEach(link=>link.addEventListener('click',()=>{accordion.open=true;}));
  if(location.hash==='#salaryCalc')accordion.open=true;
 })();
+</script>
+<script id="fujinoe-local-pdf">
+/* 履歴書PDF: ブラウザ内でA4ファイル生成。外部送信・外部ライブラリ不要。 */
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const STAGE_W=720, PW=794, PH=1123, SCALE=2;
+const resumePreview=$('resumePreviewPanel');
+if(!resumePreview)return;
+const stage=$('pdfPaperStage'), inner=$('pdfPaperInner');
+function fitPreview(){
+  if(!stage||!inner||resumePreview.classList.contains('hidden'))return;
+  const width=stage.getBoundingClientRect().width;
+  if(width<1)return;
+  const ratio=Math.min(1,width/STAGE_W);
+  inner.style.transform=`scale(${ratio})`;
+  stage.style.height=`${Math.ceil(inner.scrollHeight*ratio)+2}px`;
+}
+window.addEventListener('resize',fitPreview,{passive:true});
+if(typeof ResizeObserver!=='undefined')new ResizeObserver(fitPreview).observe(resumePreview);
+['previewBtn','printBtn','printEntryBtn','editBtn'].forEach(id=>$(id)?.addEventListener('click',()=>requestAnimationFrame(fitPreview)));
+const forms = {
+  resume:[
+    [['ふりがな','prKana'],['氏名','prName'],['生年月日','prBirth'],['性別（任意）','prGender']],
+    [['現住所','prAddress'],['電話番号','prPhone'],['メール','prEmail'],['連絡先（任意）','prContact']],
+    [['学歴','prEducation'],['職歴','prCareer'],['免許・資格','prLicenses']],
+    [['希望職種','prPreferred'],['志望動機・自己PR','prMotivation'],['本人希望欄','prRequests'],['応募区分・勤務日数','prEmployment'],['勤務・通勤の希望','prWorkPref']]
+  ],
+  entry:[
+    [['氏名','esName'],['ふりがな','esKana'],['連絡先','esTel'],['メール','esMail'],['現住所','esAddr'],['希望職種','esJob'],['希望雇用形態','esEmployment'],['勤務日数・時間','esSchedule'],['社会保険の希望','esInsurance'],['希望勤務地','esArea'],['最寄り駅','esStation'],['勤務開始の希望','esStart'],['応募のきっかけ','esSource'],['資格・経験','esLicenses'],['その他希望','esRemarks']]
+  ]
+};
+const textOf=id=>$(id)?.textContent?.trim()||'';
+let currentPdf=null,currentFile=null,currentURL=null;
+const paperMargin=48, left=paperMargin, width=PW-paperMargin*2, bottomLimit=PH-paperMargin;
+function canvasPage(){
+  const c=document.createElement('canvas');c.width=PW*SCALE;c.height=PH*SCALE;
+  const g=c.getContext('2d',{alpha:false});g.scale(SCALE,SCALE);g.fillStyle='white';g.fillRect(0,0,PW,PH);
+  g.lineJoin='miter';g.lineCap='butt';return {canvas:c,g};
+}
+function linesFor(g,txt,maxWidth,fs=15){
+  g.font=`${fs}px "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif`;
+  const lines=[];const parts=String(txt||'').replace(/\r/g,'').split('\n');
+  for(const part of parts){
+    if(!part){lines.push('');continue;}
+    let line='';
+    for(const char of Array.from(part)){
+      if(g.measureText(line+char).width>maxWidth && line){lines.push(line);line=char;}
+      else line+=char;
+    }
+    lines.push(line);
+  }
+  return lines.length?lines:[''];
+}
+function drawLine(g,x1,y1,x2,y2){g.beginPath();g.moveTo(x1+.5,y1+.5);g.lineTo(x2+.5,y2+.5);g.stroke();}
+function drawing(){
+  const pages=[];let page,g,y;
+  function nextPage(title,isFirst){
+    page=canvasPage();pages.push(page.canvas);g=page.g;
+    g.fillStyle='#111';g.textBaseline='alphabetic';g.strokeStyle='#4b4b4b';g.lineWidth=.8;
+    g.textAlign='center';g.font='bold 26px "Hiragino Mincho ProN","Yu Mincho",serif';g.fillText(title+(isFirst?'':'（続き）'),PW/2,72);
+    g.textAlign='right';g.font='12px "Hiragino Kaku Gothic ProN",sans-serif';g.fillText(isFirst?textOf('prDate'):'',PW-left,91);
+    g.textAlign='left';y=106;
+  }
+  function space(h){if(y+h>bottomLimit)nextPage(active==='resume'?'履 歴 書':'エントリーシート',false);}
+  function row(label,content,opts={}){
+    const tableWidth=opts.tableWidth||width;
+    const labelW=155, fs=opts.font||15, lineH=opts.lineHeight||21;
+    const maxW=tableWidth-labelW-23;
+    let lines=linesFor(g,content,maxW,fs);
+    const maxLines=Math.max(1,Math.floor((bottomLimit-37-y)/lineH));
+    while(lines.length){
+      if(y+35>bottomLimit)space(35);
+      const count=Math.max(1,Math.min(lines.length,Math.floor((bottomLimit-y-15)/lineH)));
+      const take=lines.splice(0,count);
+      const h=Math.max(35,take.length*lineH+14);
+      if(y+h>bottomLimit){space(h);lines=take.concat(lines);continue;}
+      g.fillStyle='#f6f6f6';g.fillRect(left,y,labelW,h);
+      g.strokeRect(left+.5,y+.5,tableWidth-1,h-1);drawLine(g,left+labelW,y,left+labelW,y+h);
+      g.fillStyle='#151515';g.font='bold 15px "Hiragino Kaku Gothic ProN",sans-serif';
+      g.fillText(label+(lines.length?'（続き）':''),left+10,y+23);
+      g.font=`${fs}px "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif`;
+      take.forEach((v,i)=>g.fillText(v,left+labelW+10,y+22+i*lineH));
+      y+=h;
+      if(lines.length)nextPage(active==='resume'?'履 歴 書':'エントリーシート',false);
+    }
+  }
+  function group(r,opts){space(16);y+=8;for(const [label,id] of r)row(label,textOf(id),opts);}
+  let active='resume';
+  return {pages, get g(){return g},get y(){return y},nextPage,group,row,space,setActive:v=>{active=v}};
+}
+async function imagePDF(type){
+  const pdf=drawing();pdf.setActive(type);pdf.nextPage(type==='resume'?'履 歴 書':'株式会社藤江　エントリーシート',true);
+  if(type==='resume'){
+    // 右側の証明写真を含めるため、先頭4行のみ右側に余白を残す。
+    const g=pdf.g;const topY=106, leftPhoto=PW-left-110;
+    // 先頭4項目は通常の表に置き、写真は写真欄として後段に配置する。
+    pdf.group(forms.resume[0],{tableWidth:width-118});
+    const photo=$('prPhoto')?.querySelector('img');
+    {
+      if(photo){try{if(!photo.complete)await photo.decode();}catch(e){}}
+      // 氏名欄と重ならない専用の写真枠。
+      const px=PW-left-105,py=118,pw=95,ph=120;
+      g.fillStyle='#fff';g.fillRect(px,py,pw,ph);g.strokeStyle='#555';g.strokeRect(px+.5,py+.5,pw,ph);
+      if(photo && photo.complete && photo.naturalWidth){
+        const r=Math.max(pw/photo.naturalWidth,ph/photo.naturalHeight),sw=pw/r,sh=ph/r;
+        g.drawImage(photo,(photo.naturalWidth-sw)/2,(photo.naturalHeight-sh)/2,sw,sh,px+1,py+1,pw-2,ph-2);
+      }else{g.fillStyle='#777';g.font='11px sans-serif';g.textAlign='center';g.fillText('証明写真（任意）',px+pw/2,py+ph/2);g.textAlign='left';}
+    }
+    forms.resume.slice(1).forEach(pdf.group);
+  }else{
+    pdf.group(forms.entry[0]);
+    pdf.space(70);
+    const g=pdf.g;
+    g.fillStyle='#666';g.font='12px "Hiragino Kaku Gothic ProN",sans-serif';g.fillText('※ 本シートは希望条件の確認用です。作成だけではエントリーは完了しません。',left,pdf.y+24);
+  }
+  const rendered=[];
+  for(const canvas of pdf.pages){
+    const jpeg=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('画像変換に失敗しました')),'image/jpeg',.9));
+    rendered.push(new Uint8Array(await jpeg.arrayBuffer()));canvas.width=1;canvas.height=1;
+  }
+  return pdfFromJpegs(rendered,PW*SCALE,PH*SCALE);
+}
+function pdfFromJpegs(jpegs,imgW,imgH){
+  const enc=new TextEncoder(),chunks=[];let size=0;
+  const add=chunk=>{const bytes=typeof chunk==='string'?enc.encode(chunk):chunk;chunks.push(bytes);size+=bytes.length};
+  const starts=[0];
+  const start=id=>{starts[id]=size;add(`${id} 0 obj\n`)};
+  const end=()=>add('endobj\n');
+  const pages=jpegs.map((_,i)=>({p:3+i*3,im:4+i*3,c:5+i*3}));
+  add('%PDF-1.4\n%PDFIMAGE\n');
+  start(1);add('<< /Type /Catalog /Pages 2 0 R >>\n');end();
+  start(2);add(`<< /Type /Pages /Kids [${pages.map(p=>`${p.p} 0 R`).join(' ')}] /Count ${pages.length} >>\n`);end();
+  pages.forEach((p,i)=>{
+    start(p.p);add(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 ${p.im} 0 R >> >> /Contents ${p.c} 0 R >>\n`);end();
+    start(p.im);add(`<< /Type /XObject /Subtype /Image /Width ${imgW} /Height ${imgH} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegs[i].length} >>\nstream\n`);add(jpegs[i]);add('\nendstream\n');end();
+    const cmd='q 595.28 0 0 841.89 0 0 cm /Im0 Do Q\n';
+    start(p.c);add(`<< /Length ${enc.encode(cmd).length} >>\nstream\n${cmd}endstream\n`);end();
+  });
+  const xref=size;add(`xref\n0 ${pages.length*3+3}\n0000000000 65535 f \n`);
+  for(let i=1;i<=pages.length*3+2;i++)add(`${String(starts[i]).padStart(10,'0')} 00000 n \n`);
+  add(`trailer\n<< /Size ${pages.length*3+3} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);
+  return new Blob(chunks,{type:'application/pdf'});
+}
+const status=$('pdfStatus'),ready=$('pdfReady'),save=$('pdfSaveLink'),open=$('pdfOpenLink'),share=$('pdfShareBtn');
+async function prepare(type){
+  if(typeof ensureWizardValid==='function'&&!ensureWizardValid())return;
+  buildPreview();requestAnimationFrame(fitPreview);
+  const source=type==='resume'?'履歴書':'エントリーシート';
+  status.textContent=`${source}PDFを作成しています…`;
+  try{
+    if(currentURL)URL.revokeObjectURL(currentURL);
+    currentPdf=await imagePDF(type);
+    const safe=(($('fullName')?.value||'').trim().replace(/[\\/:*?"<>|]/g,'').slice(0,20)||'応募者');
+    const name=`藤江_${source}_${safe}.pdf`;
+    currentFile=new File([currentPdf],name,{type:'application/pdf'});
+    currentURL=URL.createObjectURL(currentPdf);
+    save.href=currentURL;save.download=name;
+    open.href=currentURL;
+    ready.hidden=false;
+    status.textContent=`${source}PDFを作成しました（${(currentPdf.size/1024).toFixed(0)}KB）。下の「PDFを保存」または「共有」を押してください。`;
+    ready.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }catch(e){console.error(e);status.textContent='PDFを作成できませんでした。ブラウザを変更するか、通常の印刷をお試しください。'}
+}
+$('printBtn')?.addEventListener('click',()=>prepare('resume'));
+$('printEntryBtn')?.addEventListener('click',()=>prepare('entry'));
+share?.addEventListener('click',async()=>{
+  if(!currentFile)return;
+  try{
+    if(navigator.canShare?.({files:[currentFile]}))await navigator.share({files:[currentFile],title:'株式会社藤江　履歴書PDF'});
+    else if(!navigator.canShare && navigator.share)await navigator.share({files:[currentFile],title:'株式会社藤江　PDF'});
+    else{status.textContent='このブラウザではファイル共有に対応していません。「PDFを保存」「PDFを開く」をご利用ください。';}
+  }catch(e){if(e.name!=='AbortError')status.textContent='共有できませんでした。「PDFを保存」からファイルに保存してください。';}
+});
+function clearPrepared(){if(currentURL)URL.revokeObjectURL(currentURL);currentURL=null;currentPdf=null;currentFile=null;ready.hidden=true;status.textContent='内容を変更しました。新しいPDFを作成して保存してください。';}
+$('resumeForm')?.addEventListener('input',clearPrepared);
+$('resumeForm')?.addEventListener('change',clearPrepared);
+$('clearBtn')?.addEventListener('click',clearPrepared);
+$('clearFromPreview')?.addEventListener('click',clearPrepared);
+$('nativePrintBtn')?.addEventListener('click',()=>{if(typeof ensureWizardValid==='function'&&!ensureWizardValid())return;buildPreview();requestAnimationFrame(()=>window.print())});
+})();
+
 </script>
 </body> </html> 
